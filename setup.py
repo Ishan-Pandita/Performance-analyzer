@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 setup(
     name="performance-analyzer",
     version="1.0.0",
-    author="Sarthak Darshan",
+    author="Ishan Pandita",
     description="Professional Big O Complexity Analyzer",
     long_description="A professional-grade tool for analyzing time and space complexity of code across multiple programming languages using native language analyzers.",
     long_description_content_type="text/plain",
