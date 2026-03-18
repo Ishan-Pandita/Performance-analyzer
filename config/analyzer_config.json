@@ -1,0 +1,47 @@
+{
+  "version": "1.0.0",
+  "analyzers": {
+    "python": {
+      "enabled": true,
+      "timeout": 30,
+      "max_file_size": 10485760,
+      "file_extension": "py",
+      "in_process": true,
+      "analyzer_module": "analyzers.python.analyzer.PythonComplexityAnalyzer"
+    },
+    "java": {
+      "enabled": true,
+      "timeout": 30,
+      "max_file_size": 10485760,
+      "file_extension": "java",
+      "command": ["java", "-jar", "analyzers/java/target/java-analyzer-1.0.0-jar-with-dependencies.jar"],
+      "in_process": false
+    },
+    "javascript": {
+      "enabled": true,
+      "timeout": 30,
+      "max_file_size": 10485760,
+      "file_extension": "js",
+      "command": ["node", "analyzers/javascript/src/index.js"],
+      "in_process": false
+    },
+    "c": {
+      "enabled": true,
+      "timeout": 30,
+      "max_file_size": 10485760,
+      "file_extension": "c",
+      "command": ["analyzers/c/build/c_analyzer"],
+      "in_process": false
+    }
+  },
+  "output": {
+    "default_format": "table",
+    "colors_enabled": true,
+    "verbose": false
+  },
+  "limits": {
+    "max_loop_depth": 10,
+    "max_recursion_depth": 1000,
+    "complexity_timeout": 60
+  }
+}
